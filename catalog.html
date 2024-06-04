@@ -7,7 +7,7 @@
   <body>
     <header class="header-catalog"> <!--меню + шапка-->
       <a class="nav-logo" href="index.html">
-        <p class="visually-hidden">Логотип Sedona</p>
+        <img class="nav-logo-img" alt="Логотип Sedona»" src="#">
       </a>
 
       <nav class="nav">
@@ -28,17 +28,17 @@
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <p class="visually-hidden">Поиск</p>
+              <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <p class="visually-hidden">Понравилось</p>
+              <span class="visually-hidden">Понравилось</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="button" href="#">
-              <p class="visually-hidden">ХОЧУ СЮДА!</p>
+              <span class="visually-hidden">ХОЧУ СЮДА!</span>
             </a>
            </li>
         </ul>
@@ -47,8 +47,8 @@
 
     <main class="main-catalog">
       <section class="catalog-header">
-        <header clacc="maim-teader">
-          <h1 class="Heading-1">Гостиницы Седоны</h1>
+        <header clacc="main-teader">
+          <h1 class="heading-1">Гостиницы Седоны</h1>
           <ul class="nav-catalog">
             <li class="catalog-item">
               <a class="catalog-link" href="index.html">
@@ -110,13 +110,13 @@
             </ul>
           </fieldset>
 
-          <button class="button apply" type="button">Применить</button>
-          <button class="button reset" type="button">Сбросить</button>
+          <button class="button-submit" type="submit">Применить</button>
+          <button class="button-reset" type="reset">Сбросить</button>
         </form>
       </section>
 
       <section class="searching-results">
-        <h2 class="Heading-2">Найдено гостиниц: 38</h2>
+        <h2 class="heading-2">Найдено гостиниц: 38</h2>
 
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярное</option>
@@ -151,7 +151,7 @@
 
           <li class="card-hotel">
             <img class="image-hotel" src="#">
-            <h3 class="Heading-3">Villas at Poco Diablo</h3>
+            <h3 class="heading-3">Villas at Poco Diablo</h3>
             <p class="text-basic">Гостиница</p>
             <p class="text-basic">От 5000 ₽</p>
             <a class="button" href="#">Подробнее</a>
@@ -162,7 +162,7 @@
 
           <li class="card-hotel">
             <img class="image-hotel" src="#">
-            <h3 class="Heading-3">Desert Quail Inn</h3>
+            <h3 class="heading-3">Desert Quail Inn</h3>
             <p class="text-basic">Гостиница</p>
             <p class="text-basic">От 2500 ₽</p>
             <a class="button" href="#">Подробнее</a>
@@ -173,7 +173,7 @@
 
           <li class="card-hotel">
             <img class="image-hotel" src="#">
-            <h3 class="Heading-3">GreenTree Inn</h3>
+            <h3 class="heading-3">GreenTree Inn</h3>
             <p class="text-basic">Гостиница</p>
             <p class="text-basic">От 1500 ₽</p>
             <a class="button" href="#">Подробнее</a>
@@ -182,10 +182,7 @@
             <p class="rating-txt">Рейтинг: 5,0</p>
           </li>
         </ul>
-      </section>
 
-      <section class="pagination-block">
-        <h2 class="visually-hidden">Переход на другую страницу списка Гостиниц</h2>
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -210,8 +207,8 @@
     </main>
 
     <footer>
-      <section class="newsletter-index"> <!--фон белый-->
-        <h2 class="Heading-2">Подпишитесь на рассылку</h2>
+      <section class="newsletter-catalog"> <!--фон белый-->
+        <h2 class="heading-2">Подпишитесь на рассылку</h2>
         <p class="text-basic">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -223,27 +220,28 @@
       </section>
 
       <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <ul class="footer-list">
           <li class="footer-item">
             <a class="button" href="https://vk.com/htmlacademy">
-              <p class="visually-hidden">Vkontakte</p>
+              <span class="visually-hidden">Vkontakte</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://t.me/htmlacademy">
-              <p class="visually-hidden">Telegram</p>
+              <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <p class="visually-hidden">Youtube</p>
+              <span class="visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
 
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <p class="visually-hidden">Разработчик сайта html Academy</p>
+          <img class="htmlacademy-img" alt="Разработчик сайта html Academy" src="#">
         </a>
       </section>
     </footer>
