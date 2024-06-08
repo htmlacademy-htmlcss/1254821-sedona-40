@@ -5,15 +5,15 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="header-index"> <!--меню + шапка-->
+    <header class="header-common"> <!--на всех страницах идентичен-->
       <a class="nav-logo">
-        <img class="nav-logo-img" alt="Логотип Sedona»" src="#">
+        <img class="nav-logo" src="images/common/logo.svg" width="140" height="70" alt="Логотип Sedona»">
       </a>
 
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
+            <a class="nav-link current" href="index.html">Главная</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">О седоне</a>
@@ -38,7 +38,7 @@
           </li>
           <li class="nav-item">
             <a class="button" href="#">
-              <span class="visually-hidden">ХОЧУ СЮДА!</span>
+              <span class="visually-hidden">хочу сюда!</span>
             </a>
            </li>
         </ul>
@@ -48,7 +48,7 @@
     <main class="main-index">
       <section>
         <h1 class="visually-hidden">Sedona</h1>
-        <img class="welcom" src="#" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
+        <img class="welcom" src="images/home/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
       </section>
 
       <section class="delimiter criteria-delimiter">
@@ -58,17 +58,14 @@
 
       <section class="criteria">
         <h2 class="visually-hidden">Почему выбирают Седонну?</h2>
-        <ul class="criteria-block-1"> <!--описание 1 место + картинка 2 места-->
+        <ul class="criteria-block">
           <li class="criteria-item">
-            <h3 class="heading-3">Настоящий городок</h3>
-            <p class="text-basic">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <div>
+              <h3 class="heading-3">Настоящий городок</h3>
+              <p class="text-basic">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <img class="city" src="images/home/city.jpg" width="800" height="385" alt="Седона">
           </li>
-          <li>
-            <img class="real-town" src="#" alt="Седона">
-          </li>
-        </ul>
-
-        <ul class="criteria-block-2"> <!--описание 1 место-->
           <li class="criteria-item">
             <h3 class="heading-3">Небольшая площадь</h3>
             <p class="text-basic">Все достопримечательности находятся очень близко</p>
@@ -81,15 +78,12 @@
             <h3 class="heading-3">Мало туристов</h3>
             <p class="text-basic">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-        </ul>
-
-        <ul class="criteria-block-3"> <!--описание 1 место + картинка 2 места-->
           <li class="criteria-item">
-            <h3 class="heading-3">Там есть мост дьявола</h3>
-            <p class="text-basic">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          </li>
-          <li>
-            <img class="devil-bridge" src="#" alt="Мост Дьявола">
+            <img class="bridge" src="images/home/bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+            <div>
+              <h3 class="heading-3">Там есть мост дьявола</h3>
+              <p class="text-basic">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
           </li>
         </ul>
       </section>
@@ -158,8 +152,8 @@
         </ul>
 
         <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-img" alt="Разработчик сайта html Academy" src="#">
+        <a class="academy-link" href="https://htmlacademy.ru/">
+          <img class="academy" src="images/common/academy.svg" width="115" height="33" alt="Разработчик сайта html Academy">
         </a>
       </section>
     </footer>
