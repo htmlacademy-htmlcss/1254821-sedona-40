@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="header-common"> <!--на всех страницах идентичен-->
+    <header class="header-page"> <!--на всех страницах идентичен-->
       <a class="nav-logo" href="index.html">
         <img class="nav-logo" src="images/common/logo.svg" width="140" height="70" alt="Логотип Sedona»">
       </a>
 
-      <nav class="nav">
+      <nav class="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link heading-4" href="index.html">Главная</a>
@@ -23,22 +23,20 @@
             <a class="nav-link heading-4 current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-      </nav>
 
-      <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-icon">
           <li class="nav-item">
-            <a class="button-icon small" href="#">
+            <a class="button btn-clr-icon btn-txt-small" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="button-icon small" href="#">
+            <a class="button btn-clr-icon btn-txt-small" href="#">
               <span class="visually-hidden">Понравилось</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="button-basic small" href="#">
+            <a class="button btn-clr-basic btn-txt-small" href="#">
               <span class="visually-hidden">хочу сюда!</span>
             </a>
            </li>
@@ -48,11 +46,12 @@
 
     <main class="main-catalog">
       <section class="catalog-header">
+        <h1 class="heading-1">Гостиницы Седоны</h1>
+
         <header class="main-header">
-          <h1 class="heading-1">Гостиницы Седоны</h1>
           <ul class="nav-catalog">
             <li class="catalog-item">
-              <a class="text-small" href="index.html">
+              <a class="button btn-clr-transparent btn-txt-small" href="index.html">
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -65,7 +64,7 @@
 
         <h2 class="visually-hidden">Фильтр поиска гостиницы</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-infrastructure">
+          <fieldset class="catalog-block catalog-infrastructure">
             <legend class="heading-4">Инфраструктура:</legend>
             <ul class="catalog-list">
               <li class="catalog-item">
@@ -89,7 +88,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-hous">
+          <fieldset class="catalog-block catalog-hous">
             <legend class="heading-4">Тип жилья:</legend>
             <ul class="catalog-list">
               <li class="catalog-item">
@@ -113,8 +112,10 @@
             </ul>
           </fieldset>
 
-          <button class="button-second small" type="submit">Применить</button>
-          <button class="button-transparent small" type="reset">Сбросить</button>
+          <div>
+            <button class="button btn-clr-second btn-txt-small" type="submit">Применить</button>
+            <button class="button btn-clr-transparent btn-txt-small" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
 
@@ -127,13 +128,13 @@
           <option value="expensive">Сначала дорогое</option>
         </select>
 
-        <a class="button-basic small" href="#">
+        <a class="button btn-clr-icon btn-txt-small" href="#">
           <span class="visually-hidden">Показать плитку</span>
         </a>
-        <a class="button-basic small" href="#">
+        <a class="button btn-clr-icon btn-txt-small" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a class="button-basic small" href="#">
+        <a class="button btn-clr-icon btn-txt-small" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
       </section>
@@ -142,75 +143,83 @@
         <h2 class="visually-hidden">Карточки гостиниц</h2>
         <ul class="cards-hotel">
           <li class="card-hotel">
-            <img class="image-hotel" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="с изображением">
-            <h3 class="heading-3-none">Amara Resort & Spa</h3>
+            <a>
+              <img class="image-hotel" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="с изображением">
+              <h3 class="heading-3-none">Amara Resort & Spa</h3>
+            </a>
             <p class="text-block color-second">Гостиница</p>
             <p class="text-block color-second">От 4000 ₽</p>
-            <a class="button-basic small" href="#">Подробнее</a>
-            <button class="button-second small" type="button">в избранное</button>
+            <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
+            <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
             <div class="rating"></div>
-            <p class="rating-txt">Рейтинг: 8,5</p>
+            <p class="rating-text">Рейтинг: 8,5</p>
           </li>
 
           <li class="card-hotel">
-            <img class="image-hotel" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="с изображением">
-            <h3 class="heading-3-none">Villas at Poco Diablo</h3>
+            <a>
+              <img class="image-hotel" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="с изображением">
+              <h3 class="heading-3-none">Villas at Poco Diablo</h3>
+            </a>
             <p class="text-block color-second">Гостиница</p>
             <p class="text-block color-second">От 5000 ₽</p>
-            <a class="button-basic small" href="#">Подробнее</a>
-            <button class="button-select small" type="button">в избранном</button>
+            <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
+            <button class="button btn-clr-select btn-txt-small" type="button">в избранном</button>
             <div class="rating"></div>
-            <p class="rating-txt">Рейтинг: 9,2</p>
+            <p class="rating-text">Рейтинг: 9,2</p>
           </li>
 
           <li class="card-hotel">
-            <img class="image-hotel" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="с изображением">
-            <h3 class="heading-3-none">Desert Quail Inn</h3>
+            <a>
+              <img class="image-hotel" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="с изображением">
+              <h3 class="heading-3-none">Desert Quail Inn</h3>
+            </a>
             <p class="text-block color-second">Гостиница</p>
             <p class="text-block color-second">От 2500 ₽</p>
-            <a class="button-basic small" href="#">Подробнее</a>
-            <button class="button-second small" type="button">в избранное</button>
+            <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
+            <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
             <div class="rating"></div>
-            <p class="rating-txt">Рейтинг: 6,9</p>
+            <p class="rating-text">Рейтинг: 6,9</p>
           </li>
 
           <li class="card-hotel">
-            <img class="image-hotel" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="с изображением">
-            <h3 class="heading-3-none">GreenTree Inn</h3>
+            <a>
+              <img class="image-hotel" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="с изображением">
+              <h3 class="heading-3-none">GreenTree Inn</h3>
+            </a>
             <p class="text-block color-second">Гостиница</p>
             <p class="text-block color-second">От 1500 ₽</p>
-            <a class="button-basic small" href="#">Подробнее</a>
-            <button class="button-second small" type="button">в избранное</button>
+            <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
+            <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
             <div class="rating"></div>
-            <p class="rating-txt">Рейтинг: 5,0</p>
+            <p class="rating-text">Рейтинг: 5,0</p>
           </li>
         </ul>
 
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="button-current big">1</a>
+            <a class="button btn-clr-current btn-txt-big">1</a>
           </li>
           <li class="pagination-item">
-            <a class="button-second big" href="#">2</a>
+            <a class="button btn-clr-second btn-txt-big" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="button-second big" href="#">3</a>
+            <a class="button btn-clr-second btn-txt-big" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="button-second big" href="#">4</a>
+            <a class="button btn-clr-second btn-txt-big" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="big">...</a>
+            <a class="button btn-clr-current btn-txt-big">...</a>
           </li>
           <li class="pagination-item">
-            <a class="button-second big" href="#">10</a>
+            <a class="button btn-clr-second btn-txt-big" href="#">10</a>
           </li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <section class="newsletter-catalog"> <!--фон белый-->
+      <section class="newsletter newsletter-catalog"> <!--фон белый-->
         <h2 class="heading-2">Подпишитесь на рассылку</h2>
         <p class="color-second">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -226,17 +235,17 @@
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="footer-list">
           <li class="footer-item">
-            <a class="button-icon small" href="https://vk.com/htmlacademy">
+            <a class="button btn-clr-icon btn-txt-small" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Vkontakte</span>
             </a>
           </li>
           <li class="footer-item">
-            <a class="button-icon small" href="https://t.me/htmlacademy">
+            <a class="button btn-clr-icon btn-txt-small" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
           <li class="footer-item">
-            <a class="button-icon small" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="button btn-clr-icon btn-txt-small" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
