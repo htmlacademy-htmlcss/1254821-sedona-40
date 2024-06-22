@@ -59,15 +59,17 @@ body {
 .list-block {
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
 /* шапка */
 .header-page {
   display: flex;
-  margin: 0 70px;
+  margin: 0;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .nav-logo {
@@ -115,9 +117,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 415px;
   margin: 0;
-  padding-top: 96px;
+  padding: 96px 70px 104px 70px;
 }
 
 .newsletter p{
@@ -127,9 +128,10 @@ body {
 
 .contacts {
   display: flex;
-  margin: 40px 70px 30px 70px;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding: 40px 70px 30px 70px;
 }
 
 .footer-item {
@@ -155,10 +157,32 @@ body {
 .delimiter {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 260px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 64px 70px;
+}
+
+.footer-delimiter{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 96px 300px;
+}
+
+.footer-delimiter p{
+  margin-top: 20px;
+  margin-bottom: 54px;
+}
+
+.footer-delimiter a{
+  margin: auto;
+  padding: 8px 50px;
+}
+
+.delimiter p{
   margin: 0;
+  margin-top: 20px;
 }
 
 /* каталог */
@@ -179,6 +203,14 @@ body {
 
 .searching-results {
   display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 50px 70px 40px 70px;
+}
+
+.select-control {
+  margin-left: 200px;
+  margin-right: 70px;
 }
 
 .cards {
@@ -187,19 +219,36 @@ body {
 }
 
 .cards-hotel {
-  justify-content: space-between;
   width: 300;
+  padding: 0 70px 40px 70px;
 }
 
 .card-hotel {
-  padding: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
   border: solid 1px #E6E6E6;
   border-radius: 4px;
 }
 
-.pagination-item {
+.card-hotel:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 40px 70px 60px 70px;
+}
+
+.pagination-item a{
+  display: block;
   width: 60px;
   height: 60px;
+  text-align: center;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 
@@ -210,7 +259,7 @@ body {
   background-color: #23A9E1;
   background-image: url("../images/home/divider.svg"),
                     url("../images/home/sedona.jpg");
-  background-size: cover;
+  background-size: auto, cover;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -328,6 +377,11 @@ body {
   background-color: #F2F2F2;
 }
 
+.btn-clr-non {
+  color: #000000;
+  background-color: #ffffff;
+}
+
 .btn-clr-transparent {
   color: #ffffff;
   background: rgba(255, 255, 255, 0);
@@ -344,12 +398,22 @@ body {
 }
 
 /* критерии */
+.criteria {
+  padding-top: 32px;
+  text-align: center;
+}
+
 .criteria-extreme {
   display: flex;
 }
 
 .description {
   width: 400px;
+  padding: 102px 84px;
+}
+
+.description p{
+  margin: 0;
 }
 
 .criteria-item:nth-child(even) {
@@ -361,7 +425,6 @@ body {
   color: #333333;
   background: rgba(131, 179, 211, 0.2);
 }
-
 
 .criteria-item:first-child {
   width: 1200px;
@@ -375,9 +438,19 @@ body {
   background-color: #82B3D3;
 }
 
-
-
 /* преимущества */
+.advantages {
+  text-align: center;
+}
+
+.advantages-item {
+  width: 400px;
+  padding: 80px 84px;
+}
+
+.advantages-item p{
+  margin: 0;
+}
 
 .advantages-item:nth-child(even) {
   width: 400px;
