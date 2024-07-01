@@ -224,10 +224,21 @@ body {
 }
 
 .card-hotel {
+  display: grid;
+  grid-template: repeat(4, min-content) / repeat(2, 140px);
+  gap: 16px;
   padding: 19px;
   margin-bottom: 20px;
   border: solid 1px #E6E6E6;
   border-radius: 4px;
+}
+
+.link-hotel {
+  grid-column: 1 / -1;
+}
+
+.image-hotel {
+  padding-bottom: 16px;
 }
 
 .card-hotel:not(:nth-child(3n)) {
@@ -245,6 +256,7 @@ body {
   width: 60px;
   height: 60px;
   text-align: center;
+  padding-top: 11px;
 }
 
 .pagination-item:not(:last-child) {
@@ -348,6 +360,10 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: uppercase;
+}
+
+.txt-hotel {
+  margin: 0;
 }
 
 .button {
