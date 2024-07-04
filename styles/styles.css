@@ -94,6 +94,7 @@ body {
 }
 
 .nav-link {
+  position: relative;
   display: block;
   padding: 20px 16px;
   text-align: center;
@@ -103,6 +104,8 @@ body {
 }
 
 .button-icon {
+  position: relative;
+  display: block;
   min-width: 44px;
   min-height: 64px;
   color: #000000;
@@ -113,17 +116,12 @@ body {
   background-image: url("../images/common/icon-search.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px 20px;
-  padding: 22px 12px;
-
 }
 
 .list-block .nav-item:nth-child(2) .button-icon {
   background-image: url("../images/common/icon-favorites.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 28px 31px;
-  padding: 22px 12px;
 }
 
 .btn-menu {
@@ -132,9 +130,30 @@ body {
   margin: 14px 0 14px 20px;
 }
 
-.current {
-  padding-bottom: 18px;
-  border-bottom: solid 2px #756257;
+.current::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background-color: #756257;
+}
+
+.number {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 11px;
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  padding: 5px 4px;
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+  background-color: #7DB54F;
 }
 
 /* подвал */
@@ -164,6 +183,7 @@ body {
 }
 
 .footer-item {
+  display: block;
   width: 48px;
   height: 40px;
 }
@@ -171,6 +191,8 @@ body {
 .button-social {
   position: relative;
   display: block;
+  width: 48px;
+  height: 40px;
 }
 
 .button-social svg{
@@ -183,15 +205,15 @@ body {
   fill: #83B3D3;
 }
 
-.button-social svg:hover {
+.button-social:hover svg {
   fill: #68A2CA;
 }
 
-.button-social svg:focus {
+.button-social:focus svg {
   fill: #68A2CA;
 }
 
-.button-social svg:active {
+.button-social:active svg {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -215,15 +237,19 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.academy-link svg:hover {
+.academy-link svg path{
+  fill: #000000;
+}
+
+.academy-link:hover svg path{
   fill: #756157;
 }
 
-.academy-link svg:focus {
+.academy-link:focus svg path{
   fill: #756157;
 }
 
-.academy-link svg:active {
+.academy-link:active svg path{
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -355,6 +381,61 @@ body {
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
+
+.rating {
+  display: grid;
+  grid-template-columns: repeat(5,18px);
+  gap: 6px;
+
+}
+
+.card-hotel:nth-child(1) .rating::after {
+  content: "";
+  grid-template-columns: 1 / 2;
+  background-image: url("../images/catalog/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.searching-button .button-icon {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.searching-button .button-icon:hover {
+  border: 2px solid #000000;
+}
+
+.searching-button .button-icon:focus {
+  border: 2px solid #68A2CA;
+}
+
+.searching-button .button-icon:active {
+  border: 2px solid #000000;
+}
+
+.searching-button .button-icon:disabled {
+  border: 2px solid #E5E5E5;
+}
+
+.searching-button .button-icon:nth-child(1) {
+  background-image: url("../images/catalog/icon-1.svg");
+}
+
+.searching-button .button-icon:nth-child(2) {
+  background-image: url("../images/catalog/icon-2.svg");
+}
+
+.searching-button .button-icon:nth-child(3) {
+  background-image: url("../images/catalog/icon-3.svg");
+}
+
 
 /* фоновые картинки */
 .sedona {
@@ -585,22 +666,27 @@ body {
   margin: 0;
 }
 
+.description h3 {
+  position: relative;
+}
+
 .description h3::before {
   position: absolute;
   content: "";
   width: 60px;
   height: 2px;
-  margin-top: 86px;
-  margin-left: 86px;
+  top: 86px;
+  left: 50%;
+  margin-left: -30px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.description h3::before {
-  background-color: #ffffff;
+.criteria-item:first-child .description h3::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.description h3::before {
-  background-color: #ffffff;
+.criteria-item:last-child .description h3::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .criteria-item:nth-child(even) {
@@ -631,6 +717,7 @@ body {
 }
 
 .advantages-item {
+  display: block;
   width: 400px;
   padding: 80px 84px;
 }
@@ -654,23 +741,23 @@ body {
   background: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item:nth-child(1)::before {
+.advantages-item:nth-child(1) {
   background-image: url("../images/home/icon-home.svg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
+  background-position: center 81px;
 }
 
 .advantages-item:nth-child(2) {
   background-image: url("../images/home/icon-food.svg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
+  background-position: center 81px;
 }
 
 .advantages-item:nth-child(3) {
   background-image: url("../images/home/icon-souvenir.svg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center;
+  background-position: center 81px;
 }
