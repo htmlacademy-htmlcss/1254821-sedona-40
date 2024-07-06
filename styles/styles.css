@@ -781,6 +781,7 @@ body {
 
 .catalog-filter {
   display: flex;
+  padding-top: 40px;
 }
 
 .catalog-filter-column {
@@ -802,6 +803,10 @@ body {
 
 .catalog-filter .button + .catalog-filter .button {
   margin-top: 32px;
+}
+
+.catalog-filter-column .heading-4 {
+  padding-bottom: 32px;
 }
 
 
@@ -912,4 +917,46 @@ body {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+  border: none;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control:disabled{
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  background-image: url("../images/catalog/checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  background-image: url("../images/catalog/radio.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.catalog-button {
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+}
+
+.catalog-button .button:first-child {
+  margin-top: 56px;
+  margin-bottom: 32px;
 }
