@@ -52,12 +52,12 @@
 
         <header class="main-header">
           <ul class="list-block">
-            <li class="catalog-item">
+            <li class="icon-home">
               <a class="button btn-clr-transparent btn-txt-small" href="index.html">
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item icon-breadcrumbs">
               <a class="text-small">
                 <span>Гостиницы</span>
               </a>
@@ -85,7 +85,7 @@
               </li>
               <li class="catalog-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi" checked>
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
                   <span class="control-mark"></span>
                   <span class="control-label text-checkbox">Wi-Fi</span>
                 </label>
@@ -105,7 +105,7 @@
               </li>
               <li class="catalog-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="motel" checked>
+                  <input class="visually-hidden control-input" type="radio" name="motel">
                   <span class="control-mark"></span>
                   <span class="control-label text-checkbox">Мотель</span>
                 </label>
@@ -130,7 +130,7 @@
                   <span class="text-form">от</span>
                 </label>
                 <label class="catalog-filter-label">
-                  <input class="range-input text-form" type="number" value="9000" name="max-price" style="width: 37px">
+                  <input class="range-input text-form" type="number" value="9000" name="max-price">
                   <span class="text-form">до</span>
                 </label>
               </div>
@@ -158,20 +158,22 @@
       <section class="searching-results">
         <h2 class="heading-2">Найдено гостиниц: 38</h2>
 
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала популярное</option>
-          <option value="cheap">Сначала дешёвое</option>
-          <option value="expensive">Сначала дорогое</option>
-        </select>
+        <div class="sorting">
+          <select class="select-control text-block color-second" aria-label="Сортировка">
+            <option value="popular">Сначала популярное</option>
+            <option value="cheap">Сначала дешёвое</option>
+            <option value="expensive">Сначала дорогое</option>
+          </select>
+        </div>
 
         <div class="searching-button">
-          <a class="button button-icon btn-txt-small" href="#">
+          <a class="button button-searching btn-txt-small" href="#">
             <span class="visually-hidden">Показать плитку</span>
           </a>
-          <a class="button button-icon btn-txt-small" href="#">
+          <a class="button button-searching btn-txt-small" href="#">
             <span class="visually-hidden">Показать карточки</span>
           </a>
-          <a class="button button-icon btn-txt-small" href="#">
+          <a class="button button-searching btn-txt-small" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
         </div>
@@ -189,7 +191,12 @@
             <p class="text-block color-second txt-hotel txt-position">От 4000 ₽</p>
             <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
             <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
-            <div class="rating"></div>
+            <div class="rating">
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+            </div>
             <p class="rating-text">Рейтинг: 8,5</p>
           </li>
 
@@ -202,7 +209,12 @@
             <p class="text-block color-second txt-hotel txt-position">От 5000 ₽</p>
             <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
             <button class="button btn-clr-select btn-txt-small" type="button">в избранном</button>
-            <div class="rating"></div>
+            <div class="rating">
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+            </div>
             <p class="rating-text">Рейтинг: 9,2</p>
           </li>
 
@@ -215,7 +227,11 @@
             <p class="text-block color-second txt-hotel txt-position">От 2500 ₽</p>
             <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
             <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
-            <div class="rating"></div>
+            <div class="rating">
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+            </div>
             <p class="rating-text">Рейтинг: 6,9</p>
           </li>
 
@@ -228,7 +244,10 @@
             <p class="text-block color-second txt-hotel txt-position">От 1500 ₽</p>
             <a class="button btn-clr-basic btn-txt-small" href="#">Подробнее</a>
             <button class="button btn-clr-second btn-txt-small" type="button">в избранное</button>
-            <div class="rating"></div>
+            <div class="rating">
+              <div class="rating-star"></div>
+              <div class="rating-star"></div>
+            </div>
             <p class="rating-text">Рейтинг: 5,0</p>
           </li>
         </ul>
