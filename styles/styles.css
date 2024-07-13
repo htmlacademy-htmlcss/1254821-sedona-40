@@ -24,6 +24,8 @@
 
 html {
   height: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
   background-color: #F2F2F2;
 }
 
@@ -168,14 +170,22 @@ body {
 }
 
 .newsletter p {
-  width: 475px;
+  width: 684px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 54px;
 }
 
+.newsletter h2 {
+  width: 684px;
+  text-align: center;
+}
+
+
 .newsletter button {
-  padding: 8px 50px;
+  padding: 8px 20px;
+  min-width: 232px;
+  max-width: 260px;
 }
 
 .contacts {
@@ -225,6 +235,7 @@ body {
   padding: 5px 20px;
   font-size: 40px;
   line-height: 40px;
+  max-width: 600px;
   color: #000000;
   text-decoration: none;
 }
@@ -305,6 +316,10 @@ body {
 
 .main-header {
   margin-left: 24px;
+}
+
+.catalog-item + .catalog-item {
+  padding-top: 16px;
 }
 
 .catalog-item:hover {
@@ -473,8 +488,9 @@ body {
 
 .pagination-item a{
   display: block;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  max-width: 120px;
+  min-height: 60px;
   text-align: center;
   padding-top: 11px;
 }
@@ -729,18 +745,23 @@ body {
   display: flex;
 }
 
+.criteria-extreme img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .description {
   width: 400px;
   padding: 102px 84px;
 }
 
 .description p{
-  padding-top: 62px;
   margin: 0;
 }
 
 .description h3 {
   position: relative;
+  margin-bottom: 62px;
 }
 
 .description h3::before {
@@ -748,7 +769,7 @@ body {
   content: "";
   width: 60px;
   height: 2px;
-  top: 86px;
+  bottom: -30px;
   left: 50%;
   margin-left: -30px;
   background-color: rgba(0, 0, 0, 0.3);
