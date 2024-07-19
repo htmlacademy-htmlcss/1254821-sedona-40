@@ -95,12 +95,6 @@ img {
   border-radius: 4px;
 }
 
-.nav-logo:focus {
-  outline: none;
-  box-shadow: inset 2px 0 #83B3D3;
-  border-radius: 4px;
-}
-
 /* шапка */
 .header-page {
   display: flex;
@@ -110,9 +104,15 @@ img {
 }
 
 .nav-logo {
-  margin-right: 30px;
+  margin-right: 15px;
   margin-bottom: -6px;
   z-index: 999;
+}
+
+.nav-logo:focus {
+  outline: none;
+  box-shadow: inset 2px 0 #83B3D3;
+  border-radius: 4px;
 }
 
 .nav-menu {
@@ -154,7 +154,7 @@ img {
 
 .btn-menu {
   display: block;
-  padding: 8px 32px;
+  padding: 8px 34px;
   margin: 14px 0 14px 20px;
 }
 
@@ -315,10 +315,21 @@ img {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  padding: 64px 70px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
-.footer-delimiter{
+.delimiter-first {
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.delimiter-second {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.footer-delimiter {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -326,19 +337,19 @@ img {
   padding: 96px 300px;
 }
 
-.footer-delimiter p{
+.footer-delimiter p {
   margin-top: 20px;
   margin-bottom: 54px;
 }
 
-.footer-delimiter a{
+.footer-delimiter a {
   margin: auto;
   padding: 8px 50px;
 }
 
-.delimiter p{
+.delimiter p {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 /* каталог */
@@ -355,7 +366,7 @@ img {
 
 .catalog-item + .catalog-item {
   padding-right: 30px;
-  padding-top: 16px;
+  padding-top: 14px;
 }
 
 .list-block li:hover {
@@ -414,7 +425,7 @@ img {
 }
 
 .select-control {
-  padding: 14px 20px;
+  padding: 12px 18px;
   width: 292px;
   background-color: #ffffff;
   border: 2px solid #E5E5E5;
@@ -489,7 +500,7 @@ img {
 .cards {
   display: flex;
   flex-direction: column;
-  padding: 0 70px 40px 70px;
+  padding: 0 70px 60px 70px;
 }
 
 .cards-hotel {
@@ -517,7 +528,11 @@ img {
 }
 
 .image-hotel {
-  padding-bottom: 16px;
+  padding-bottom: 12px;
+}
+
+.txt-hotel {
+  margin: 0;
 }
 
 .txt-position {
@@ -527,8 +542,7 @@ img {
 .pagination {
   display: flex;
   margin: 0;
-  padding-top: 81px;
-  padding-bottom: 70px;
+  padding-top: 80px;
 }
 
 .pagination::before {
@@ -542,7 +556,7 @@ img {
   background-color: #E6E6E6;
 }
 
-.pagination-item a{
+.pagination-item a {
   display: block;
   min-width: 60px;
   max-width: 120px;
@@ -554,8 +568,6 @@ img {
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
-
-
 
 .rating {
   display: grid;
@@ -776,11 +788,13 @@ img {
 }
 
 .btn-txt-small {
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
 
 .btn-txt-big {
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
 }
@@ -799,7 +813,6 @@ img {
 
 /* критерии */
 .criteria {
-  padding-top: 32px;
   text-align: center;
 }
 
@@ -814,10 +827,15 @@ img {
 
 .description {
   width: 400px;
+  padding: 112px 84px;
+}
+
+.description:first-child,
+.description:last-child {
   padding: 102px 84px;
 }
 
-.description p{
+.description p {
   margin: 0;
 }
 
@@ -878,10 +896,11 @@ img {
   padding: 80px 84px;
 }
 
-.advantages-item p{
+.advantages-item p {
   margin: 0;
+  padding-top: 30px;
 }
-.advantages-item h3{
+.advantages-item h3 {
   padding-top: 102px;
 }
 
@@ -948,7 +967,7 @@ img {
 
 .catalog-filter {
   display: flex;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .catalog-filter-column {
@@ -960,8 +979,8 @@ img {
 }
 
 .catalog-filter-column + .catalog-filter-column {
-  margin-left: 50px;
-  margin-right: 140px;
+  margin-left: 70px;
+  margin-right: 120px;
 }
 
 .catalog-filter .button {
@@ -986,7 +1005,8 @@ img {
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 48px;
+  margin-top: 43px;
+  margin-left: 5px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1154,10 +1174,12 @@ img {
 
 .catalog-button .button:first-child {
   margin-top: 56px;
+  width: 190px;
 }
 
 .catalog-button .button:not(:first-child) {
   margin-top: 32px;
+  width: 190px;
 }
 
 /* модальное окно */
@@ -1174,14 +1196,14 @@ img {
 .modal {
   position: relative;
   margin: auto;
-  padding: 40px;
+  padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
 }
 
-.modal-auth {
+/*.modal-auth {
   width: 717px;
-}
+}*/
 
 .modal-close-button {
   position: absolute;
@@ -1203,25 +1225,42 @@ img {
   background-color: #E6E6E6;
 }
 
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
 .modal-close-button:active {
   background-color: #E6E6E6;
-  border: 3px solid #83B3D3;
 }
 
 .modal-content h2 {
-  padding: 24px 0 64px 30px;
+  width: 540px;
+  padding-bottom: 64px;
 }
 
 .auth-form {
   display: grid;
-  grid-template-columns: 138px 150px 138px 150px;
-  grid-template-rows: repeat(7, content);
+  grid-template-columns: 129px 190px 123px 110px;
+  grid-template-rows: repeat(7, auto);
+  column-gap: 8px;
 }
 
 .auth-form .heading-4 {
   margin: 0;
   padding: 12px 0;
 }
+
+.auth-form-check-in {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.auth-form-check-out {
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
+}
+
 
 .check-form {
   grid-column: 2 / -1;
@@ -1240,12 +1279,39 @@ img {
 .error-form {
   grid-column: 2 / -1;
   margin: 0;
+  margin-bottom: auto;
   padding: 4px 0 22px 20px;
 }
 
 .auth-form-field {
   width: 440px;
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #F2F2F2;
+  border: none;
   border-radius: 4px;
+}
+
+.auth-form-field:hover {
+  background-color: #E6E6E6;
+}
+
+.auth-form-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.check-form::before {
+  content: "";
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/home/date.svg");
+  background-position: center;
 }
 
 .btn-form {
@@ -1283,17 +1349,15 @@ img {
   border-bottom-left-radius: 0;
 }
 
-.btn-form:hover .bnt-minus::before,
-.btn-form:hover .bnt-plus::before,
-.btn-form:hover .bnt-plus::after {
-  background-color: #000000
+.btn-form:hover ~ .bnt-minus::before,
+.btn-form:hover ~ .bnt-plus::before,
+.btn-form:hover ~ .bnt-plus::after {
+  color: #000000
 }
 
-.btn-form:hover .bnt-minus::before,
-.btn-form:hover .bnt-plus::before,
-.btn-form:hover .bnt-plus::after {
-  background-color: #000000;
-  border: 3px solid  #82B3D3;
+.btn-form:focus-within {
+  color: #000000;
+  outline: 3px solid  #82B3D3;
   border-radius: 4px;
 
 }
@@ -1309,6 +1373,7 @@ img {
   width: 31px;
   height: 48px;
   background-color: #F2F2F2;
+  border: none;
 }
 
 .flex-form {
@@ -1329,6 +1394,9 @@ img {
   padding-bottom: 18px;
   border-radius: 10px;
   text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .modal-container-close {
@@ -1374,8 +1442,8 @@ img {
 .tooltip {
   display: block;
   position: relative;
-  margin-top: -40px;
-  margin-left: 55px;
+  margin-top: -36px;
+  margin-left: 52px;
   width: 26px;
   height: 26px;
 }
