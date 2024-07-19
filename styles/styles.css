@@ -913,7 +913,7 @@ img {
 .advantages-item:nth-child(odd) {
   width: 400px;
   color: #333333;
-  background: rgba(131, 179, 211, 0.2);
+  background: #ffffff;
 }
 
 .advantages-item:nth-child(1) {
