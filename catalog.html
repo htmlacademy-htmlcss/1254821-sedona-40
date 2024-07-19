@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico" sizes="32x32">
   </head>
   <body>
-    <header class="header-page"> <!--на всех страницах идентичен-->
+    <header class="header-page" data-test="header"> <!--на всех страницах идентичен-->
       <a class="nav-logo" href="index.html">
         <img class="nav-logo" src="images/common/logo.svg" width="140" height="70" alt="Логотип Sedona»">
       </a>
@@ -18,7 +18,7 @@
             <a class="nav-link heading-4" href="index.html">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link heading-4" href="#">О седоне</a>
+            <a class="nav-link heading-4" href="#">О Седоне</a>
           </li>
           <li class="nav-item">
             <a class="nav-link heading-4 current" href="catalog.html">Гостиницы</a>
@@ -46,7 +46,7 @@
       </nav>
     </header>
 
-    <main class="main-grow">
+    <main class="main-grow" data-test="main">
       <section class="catalog-header">
         <h1 class="heading-1">Гостиницы Седоны</h1>
 
@@ -65,7 +65,7 @@
         </header>
 
         <h2 class="visually-hidden">Фильтр поиска гостиницы</h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter" >
           <fieldset class="catalog-filter-group catalog-filter-column">
             <legend class="heading-4">Инфраструктура:</legend>
             <ul class="list-block">
@@ -155,7 +155,7 @@
         </form>
       </section>
 
-      <section class="searching-results">
+      <section class="searching-results" data-test="catalog">
         <h2 class="heading-2">Найдено гостиниц: 38</h2>
 
         <div>
@@ -276,7 +276,7 @@
     </main>
 
     <footer>
-      <section class="newsletter newsletter-catalog"> <!--фон белый-->
+      <section class="newsletter newsletter-catalog" data-test="subscribe"> <!--фон белый-->
         <h2 class="heading-2">Подпишитесь на рассылку</h2>
         <p class="color-second">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
 
@@ -287,7 +287,7 @@
         </form>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" data-test="footer">
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="list-block">
           <li class="footer-item">
