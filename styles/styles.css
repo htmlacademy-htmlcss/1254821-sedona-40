@@ -358,6 +358,11 @@ img {
   flex-direction: column;
   margin: 0;
   padding: 35px 70px 70px 70px;
+  color: #ffffff;
+  background-color: #82B3D3;
+  background-image: url("../images/catalog/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main-header {
@@ -606,14 +611,6 @@ img {
   color: #ffffff;
   background-color: #82B3D3;
   background-image: url("../images/home/footer.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.catalog-header {
-  color: #ffffff;
-  background-color: #82B3D3;
-  background-image: url("../images/catalog/header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -900,6 +897,7 @@ img {
   margin: 0;
   padding-top: 30px;
 }
+
 .advantages-item h3 {
   padding-top: 102px;
 }
