@@ -1400,6 +1400,10 @@ img {
 }
 
 /* tooltip */
+.tooltip-position {
+  position: relative;
+}
+
 .tooltip-text {
   position: absolute;
   margin-top: 15px;
@@ -1441,23 +1445,26 @@ img {
   padding: 12px 8px 12px 0;
   max-width: 89px;
   word-break: break-all;
-  position: absolute;
 }
 
 .tooltip {
-  display: block;
-  position: relative;
-  top: 12px;
-  left: 56px;
+  position: absolute;
   width: 26px;
   height: 26px;
-  margin: 0;
+  margin: -36px 0 0 56px;
 }
 
 .tooltip-toggle {
+  display: block;
   margin: 0;
   padding: 0;
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+.tooltip-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
