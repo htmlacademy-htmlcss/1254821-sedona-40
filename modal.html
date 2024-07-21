@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico" sizes="32x32">
   </head>
   <body>
-    <header class="header-page"> <!--на всех страницах идентичен-->
+    <header class="header-page" data-test="header"> <!--на всех страницах идентичен-->
       <a class="nav-logo" href="index.html">
         <img class="nav-logo" src="images/common/logo.svg" width="138" height="70" alt="Логотип Sedona»">
       </a>
@@ -46,8 +46,8 @@
       </nav>
     </header>
 
-    <main class="main-grow">
-      <section class="sedona">
+    <main class="main-grow" data-test="main">
+      <section class="sedona" data-test="hero" >
         <h1 class="visually-hidden">Sedona</h1>
         <img class="welcom" src="images/home/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
       </section>
@@ -57,7 +57,7 @@
         <p class="color-second">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
 
-      <section class="criteria">
+      <section class="criteria" data-test="advantages">
         <h2 class="visually-hidden">Почему выбирают Седонну?</h2>
         <ul class="list-block">
           <li class="criteria-item criteria-extreme">
@@ -94,7 +94,7 @@
         <p class="color-second">Опытный персонал и качественное обслуживание!</p>
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="service">
         <ul class="list-block">
           <li class="advantages-item">
             <h3 class="heading-3">Жильё</h3>
@@ -111,7 +111,7 @@
         </ul>
       </section>
 
-      <section class="footer-delimiter">
+      <section class="footer-delimiter" data-test="search">
         <h2 class="heading-2">Заинтересовались?</h2>
         <p class="text-basic">Укажите предполагаемые даты поездки, <br/> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="button btn-clr-basic btn-txt-big" href="#">Поиск гостиницы в Седоне</a>
@@ -119,7 +119,7 @@
     </main>
 
     <footer>
-      <section class="newsletter newsletter-index"> <!--на фоне картинка-->
+      <section class="newsletter newsletter-index" data-test="subscribe"> <!--на фоне картинка-->
         <h2 class="heading-2">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
 
@@ -130,7 +130,7 @@
         </form>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" data-test="footer">
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="list-block">
           <li class="footer-item">
@@ -187,9 +187,9 @@
       </section>
     </footer>
 
-    <div class="modal-container" data-test="modal">
+    <div class="modal-container">
       <div class="modal modal-auth">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -210,17 +210,17 @@
             </div>
             <p class="error-form text-small color-second">На эти даты есть свободные номера. Пока есть.</p>
 
-            <p class="heading-4">Взрослые:</p>
+            <p class="heading-adults">Взрослые:</p>
             <div class="flex-form">
-              <button class="button btn-form bnt-minus" type="submit"></button>
+              <button class="button btn-form bnt-minus" type="button"></button>
               <input class="form-number" type="text" id="adults" name="adults" value="2">
-              <button class="button btn-form bnt-plus" type="submit"></button>
+              <button class="button btn-form bnt-plus" type="button"></button>
             </div>
 
             <div>
-              <p class="heading-4">Дети:</p>
+              <p class="heading-children">Дети:</p>
               <span class="tooltip">
-                <button class="button tooltip-toggle" type="button">
+                <button class="tooltip-toggle" type="button">
                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
@@ -230,9 +230,9 @@
               </span>
             </div>
             <div class="flex-form">
-              <button class="button btn-form bnt-minus" type="submit"></button>
+              <button class="button btn-form bnt-minus" type="button"></button>
               <input class="form-number" type="text" id="children" name="children" value="2">
-              <button class="button btn-form bnt-plus" type="submit"></button>
+              <button class="button btn-form bnt-plus" type="button"></button>
             </div>
             <button class="button btn-clr-second btn-find" type="submit">Найти</button>
           </form>
