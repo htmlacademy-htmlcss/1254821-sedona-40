@@ -95,6 +95,22 @@ img {
   border-radius: 4px;
 }
 
+.nav-item .heading-4:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-item .button-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-item .heading-4:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.nav-item .button-icon:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
 /* шапка */
 .header-page {
   display: flex;
@@ -140,13 +156,13 @@ img {
   background-color: #ffffff;
 }
 
-.list-block .nav-item:nth-child(1) .button-icon {
+.button-icon-search {
   background-image: url("../images/common/icon-search.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.list-block .nav-item:nth-child(2) .button-icon {
+.button-icon-favorites {
   background-image: url("../images/common/icon-favorites.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -175,6 +191,7 @@ img {
   top: 11px;
   left: 20px;
   min-width: 20px;
+  height: 20px;
   border-radius: 20px;
   padding: 5px 4px;
   font-size: 10px;
@@ -217,6 +234,10 @@ img {
   align-items: center;
   margin: 0;
   padding: 40px 70px 30px;
+}
+
+.contacts .list-block {
+  max-width: 200px;
 }
 
 .footer-item {
@@ -283,19 +304,19 @@ img {
   border-radius: 4px;
 }
 
-.academy-link svg path {
+.academy-link path {
   fill: #000000;
 }
 
-.academy-link:hover svg path {
+.academy-link:hover path {
   fill: #756157;
 }
 
-.academy-link:focus svg path {
+.academy-link:focus path {
   fill: #756157;
 }
 
-.academy-link:active svg path {
+.academy-link:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -382,17 +403,11 @@ img {
   opacity: 1;
 }
 
-.icon-home::after {
+.icon-home .catalog-item {
   display: block;
   position: relative;
-  content: "";
   top: 8px;
   left: -24px;
-  width: 13px;
-  height: 15px;
-  background-image: url("../images/catalog/home.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .icon-breadcrumbs::after {
@@ -446,8 +461,9 @@ img {
   outline: 2px solid #68a2ca;
 }
 
-.select-control:disabled {
-  opacity: 0.3;
+.select-control:active {
+  border: none;
+  outline: 2px solid #68a2ca;
 }
 
 .searching-button {
@@ -459,7 +475,6 @@ img {
   padding: 0;
   margin-left: 70px;
 }
-
 
 .button-searching {
   display: block;
@@ -484,7 +499,6 @@ img {
 .button-searching:active {
   border: 2px solid #000000;
 }
-
 
 .button-searching:nth-child(1) {
   background-image: url("../images/catalog/icon-1.svg");
@@ -512,7 +526,7 @@ img {
 
 .card-hotel {
   display: grid;
-  grid-template: repeat(4, min-content) / repeat(2, 1fr);
+  grid-template: repeat(4, auto) / repeat(2, 1fr);
   gap: 16px 20px;
   padding: 19px;
   border: solid 1px #e6e6e6;
@@ -530,9 +544,10 @@ img {
 }
 
 .image-hotel {
-  height: 100%;
-  object-fit: cover;
-  padding-bottom: 12px;
+  width: 300px;
+  height: 212px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
 .txt-hotel {
@@ -556,7 +571,6 @@ img {
   height: 1px;
   margin: 0 auto;
   top: -40px;
-
   background-color: #e6e6e6;
 }
 
@@ -566,7 +580,7 @@ img {
   max-width: 120px;
   min-height: 60px;
   text-align: center;
-  padding-top: 11px;
+  padding: 11px 8px;
 }
 
 .pagination-item:not(:last-child) {
@@ -648,6 +662,7 @@ img {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  color: #000000;
 }
 
 .heading-4 {
@@ -841,7 +856,7 @@ img {
   margin-bottom: 62px;
 }
 
-.description h3::before {
+.criteria-item-delimiter::before {
   position: absolute;
   content: "";
   width: 60px;
@@ -852,11 +867,14 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.criteria-item:first-child .description h3::before {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.criteria-item:last-child .description h3::before {
+.criteria-extreme-delimiter::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -30px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -904,13 +922,11 @@ img {
 
 .advantages-item:nth-child(even) {
   width: 400px;
-  color: #333333;
   background: #ffffff;
 }
 
 .advantages-item:nth-child(odd) {
   width: 400px;
-  color: #333333;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -992,7 +1008,6 @@ img {
 .catalog-filter-group .heading-4 {
   padding-bottom: 32px;
 }
-
 
 .catalog-filter-group {
   margin: 0;
@@ -1164,6 +1179,10 @@ img {
   outline: 3px solid #83b3d3;
 }
 
+.control-input:disabled ~ .control-mark {
+  opacity: 0.3;
+}
+
 .catalog-button {
   display: flex;
   flex-direction: column;
@@ -1189,6 +1208,10 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -1325,22 +1348,7 @@ img {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-}
-
-.bnt-minus::before,
-.bnt-plus::before,
-.bnt-plus::after {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 2px;
-  top: 23px;
-  left: 13px;
-  background-color: rgba(117, 97, 87, 0.3);
-}
-
-.bnt-plus::after {
-  transform: rotate(-90deg);
+  outline: none;
 }
 
 .bnt-minus {
@@ -1353,16 +1361,22 @@ img {
   border-bottom-left-radius: 0;
 }
 
-.btn-form:hover ~ .bnt-minus::before,
-.btn-form:hover ~ .bnt-plus::before,
-.btn-form:hover ~ .bnt-plus::after {
-  color: #000000;
+.btn-form svg {
+  fill: rgba(117, 88, 12, 0.3)
 }
 
-.btn-form:focus-within {
-  color: #000000;
+.btn-form:hover path {
+  fill: #000000;
+}
+
+.btn-form:focus-visible svg {
+  fill: #000000;
   outline: 3px solid  #82b3d3;
   border-radius: 4px;
+}
+
+.btn-form:active path {
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .form-number {
@@ -1395,10 +1409,6 @@ img {
   font-weight: 700;
 }
 
-.modal-container-close {
-  display: none;
-}
-
 /* tooltip */
 .tooltip-position {
   position: relative;
@@ -1406,7 +1416,8 @@ img {
 
 .tooltip-text {
   position: absolute;
-  margin-top: 15px;
+  margin-top: 13px;
+  margin-left: 2px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -1415,7 +1426,7 @@ img {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  padding: 16px 20px;
+  padding: 20px 18px 22px 22px;
   border-radius: 10px;
   display: none;
 }
@@ -1423,8 +1434,8 @@ img {
 .tooltip-text::before {
   content: "";
   position: absolute;
-  margin-top: -23px;
-  margin-left: -2px;
+  margin-top: -26px;
+  margin-left: -7px;
   width: 14px;
   height: 14px;
   background-color: #333333;
