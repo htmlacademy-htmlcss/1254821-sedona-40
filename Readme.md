@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Илья Гуторов](https://up.htmlacademy.ru/htmlcss/40/user/1254821).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгения Подопригора](https://htmlacademy.ru/profile/id2387199).
+* Проект: [Седона](https://gutorovi.github.io/1254821-sedona-40/).
 
 ---
 
