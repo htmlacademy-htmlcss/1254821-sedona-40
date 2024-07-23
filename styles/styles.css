@@ -445,6 +445,7 @@ img {
 }
 
 .select-control {
+  font-family: "PT Sans", sans-serif;
   padding: 12px 18px;
   width: 292px;
   background-color: #ffffff;
@@ -564,7 +565,7 @@ img {
 .pagination {
   display: flex;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 78px;
 }
 
 .pagination::before {
@@ -698,6 +699,7 @@ img {
 }
 
 .text-form {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-overflow: ellipsis;
@@ -1318,6 +1320,7 @@ img {
 }
 
 .auth-form-field {
+  font-family: "PT Sans", sans-serif;
   width: 440px;
   margin: 0;
   padding: 12px 20px;
@@ -1495,4 +1498,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.current {
+  pointer-events: none;
 }
