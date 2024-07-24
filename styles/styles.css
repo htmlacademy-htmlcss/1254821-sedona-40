@@ -147,6 +147,14 @@ img {
   background-color: #ffffff;
 }
 
+.nav-menu ul:first-child {
+  max-width: 500px;
+}
+
+.nav-menu ul:last-child {
+  max-width: 400px;
+}
+
 .button-icon {
   position: relative;
   display: block;
@@ -170,8 +178,10 @@ img {
 
 .btn-menu {
   display: block;
+  max-width: 240px;
   padding: 8px 34px;
   margin: 14px 0 14px 20px;
+  word-break: break-all;
 }
 
 .current::before {
@@ -1018,11 +1028,11 @@ img {
   margin-right: 120px;
 }
 
-.catalog-filter .button {
+.btn-filter {
   padding: 8px 50px;
 }
 
-.catalog-filter .button + .catalog-filter .button {
+.btn-filter + .btn-filter {
   margin-top: 32px;
 }
 
