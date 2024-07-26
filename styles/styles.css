@@ -178,8 +178,8 @@ img {
 
 .btn-menu {
   display: block;
-  max-width: 240px;
-  padding: 8px 34px;
+  width: 160px;
+  padding: 8px;
   margin: 14px 0 14px 20px;
   word-break: break-all;
 }
